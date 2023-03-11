@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+    	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Search utility for IppSec's YouTube videos">
+	<meta name="keywords" content="ippsec, hacking, pentesting, hackthebox, htb">
+	<meta name="author" content="khdev">
     <title>Tour and Travel Website</title>
     <script src="./script.js" defer ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
@@ -16,12 +22,18 @@
       </ul>
     </nav>
 <header>
+
+	
 <div class="carousel-container">
   <div class="carousel-slide">
+    <img src="https://vargiskhan.com/log/wp-content/uploads/2022/03/spiti-valley-6.jpg" alt="Tour 1 Image">
+    <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2 Image">
+     <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1 Image">
+    <img src="https://vargiskhan.com/log/wp-content/uploads/2022/03/leh-in-winters.jpg" alt="Tour 2 Image">
     <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1 Image">
     <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2 Image">
      <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1 Image">
-    <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2 Image">
+    
   </div>
 </div>
 
@@ -32,6 +44,11 @@
       <div id="home" class="tab-content active">
         <h2>Our Tours</h2>
         <p>Please select a tour to learn more:</p>
+        <form>
+  <input type="text" id="search-bar" placeholder="Search for tours...">
+</form>
+
+
         <table>
           <tr>
             <th>
@@ -40,7 +57,7 @@
             <strong>Manali</strong>
           </div>
           <a href="#tour1" class="tour-link">
-            <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1"  width="470" height="420" >
+            <img id="manali-img" src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1"  width="470" height="420" >
           </a>
         </div>
         </th>
@@ -50,7 +67,7 @@
             <strong>Shimla</strong>
           </div>
           <a href="#tour2" class="tour-link">
-            <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2"  width="470" height="420" >
+            <img id="shimla-img" src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2"  width="470" height="420" >
           </a>
         </div></th>
 
@@ -62,7 +79,7 @@
             <strong>Spiti</strong>
           </div>
           <a href="#tour3" class="tour-link">
-            <img src="https://vargiskhan.com/log/wp-content/uploads/2022/03/spiti-valley-6.jpg" alt="Tour 3"  width="470" height="420" >
+            <img  id="spiti-img "src="https://vargiskhan.com/log/wp-content/uploads/2022/03/spiti-valley-6.jpg" alt="Tour 3"  width="470" height="420" >
           </a>
         </div></th>
         
@@ -73,7 +90,7 @@
             <strong>Leh</strong>
           </div>
           <a href="#tour4" class="tour-link">
-            <img src="https://vargiskhan.com/log/wp-content/uploads/2022/03/leh-in-winters.jpg" alt="Tour 4"  width="470" height="420" >
+            <img  id="leh-img "src="https://vargiskhan.com/log/wp-content/uploads/2022/03/leh-in-winters.jpg" alt="Tour 4"  width="470" height="420" >
           </a>
         </div> </tr></table>
 
@@ -211,6 +228,7 @@ Day 4: Nubra Valley to Pangong Lake
 
   </body>
 </html>
+
 
 
 

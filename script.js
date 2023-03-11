@@ -37,3 +37,16 @@ tourLinks.forEach(link => {
   });
 });
 
+
+
+
+
+$(document).ready(function(){
+  $("#search-bar").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#home table tr").filter(function() {
+      var tourName = $(this).find("strong").text().toLowerCase();
+      $(this).toggle(tourName.indexOf(value) > -1)
+    });
+  });
+});

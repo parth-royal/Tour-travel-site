@@ -174,21 +174,20 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #45a049;
 }
-
-
+/* Slider */
 .carousel-container {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 }
 
 .carousel-slide {
   display: flex;
-  width: 100%;
-  animation: slide 7s infinite;
+  width: 300%; /* adjust the width to be 3 times the width of one image */
+  animation: slide 19s infinite;
 }
 
 .carousel-slide img {
-  width: 50%;
+  width: 14%; /* adjust the width to be 14% (7 images in one row) */
   height: auto;
 }
 
@@ -200,6 +199,7 @@ button[type="submit"]:hover {
     transform: translateX(-50%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-01);
   }
 }
+
