@@ -245,3 +245,26 @@ td {
   padding: 20px;
   text-align: center;
 }
+
+
+
+/* Cus */
+.contact-details {
+  margin-top: 100px;
+  margin-bottom: 0px;
+
+}
+.contact-form {
+  /* Add your styles for the form here */
+  margin-bottom: 100px;
+  margin-top: 80px;
+
+}
+
+/*logo */
+
+.logo {
+  
+    transform: scale(0.5);
+
+}
