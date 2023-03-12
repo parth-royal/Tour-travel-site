@@ -1,3 +1,7 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
 /* Header and Navigation */
 header {
   display: flex;
@@ -81,9 +85,11 @@ footer {
   align-items: center;
   height: 100px;
   background-color: #333;
-  color: #fff;
 }
 
+footer p {
+  color: #fff;
+}
 footer ul {
   display: flex;
   justify-content: center;
@@ -203,3 +209,39 @@ button[type="submit"]:hover {
   }
 }
 
+/*<p>*/
+
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #333;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/*table*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  padding: 20px;
+  text-align: center;
+}
