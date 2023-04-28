@@ -37,16 +37,14 @@ tourLinks.forEach(link => {
   });
 });
 
+$(document).ready(function() {
 
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function() {
 
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
 
-
-$(document).ready(function(){
-  $("#search-bar").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#home table tr").filter(function() {
-      var tourName = $(this).find("strong").text().toLowerCase();
-      $(this).toggle(tourName.indexOf(value) > -1)
-    });
   });
 });

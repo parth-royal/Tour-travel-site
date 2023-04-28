@@ -1,234 +1,520 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="google-site-verification" content="W6n_FFrCdy71l3-iY9yLd3d-fZbfCy2jx5okG9TM6GU" />
-    	<meta charset="UTF-8">
-	<meta name="description" content="Bhumikaholidays tour and travel site">
-        <meta name="keywords" content="tour&travel, shimla, Himachal, india, modis">
-	<meta name="author" content="khdev">
-    <title>Tour and Travel Website</title>
-    <script src="./script.js" defer ></script>
+    <meta name="google-site-verification" content="W6n_FFrCdy71l3-iY9yLd3d-fZbfCy2jx5okG9TM6GU" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Bhumikaholidays tour and travel site">
+    <meta name="keywords" content="tour&travel, shimla, Himachal, india, modis">
+    <meta name="author" content="khdev">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bhumikaholidays</title>
+    <script src="./script.js" defer></script>
+    <script src="./modal.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    
+    <script type="text/javascript">
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "sender@email_address.com",
+          Password: "Enter your password",
+          To: 'receiver@email_address.com',
+          From: "sender@email_address.com",
+          Subject: "Sending Email using javascript",
+          Body: "Well that was easy!!",
+        }).then(function(message) {
+          alert("mail sent successfully")
+        });
+      }
+    </script>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#home" class="tab-link active">Home</a></li>
-        <li><a href="#tours" class="tab-link">Tours</a></li>
-        <li><a href="#about" class="tab-link">About</a></li>
-        <li><a href="#contact" class="tab-link">Contact</a></li>
-      </ul>
-    </nav>
-<header>
-
-	
-<div class="carousel-container">
-  <div class="carousel-slide">
-    <img src="https://vargiskhan.com/log/wp-content/uploads/2022/03/spiti-valley-6.jpg" alt="Tour 1 Image">
-    <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2 Image">
-     <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1 Image">
-    <img src="https://vargiskhan.com/log/wp-content/uploads/2022/03/leh-in-winters.jpg" alt="Tour 2 Image">
-    <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1 Image">
-    <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2 Image">
-     <img src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1 Image">
-    
-  </div>
-</div>
-
-  
-</header>
-
-    <main>
-      <div id="home" class="tab-content active">
-        <h2>Our Tours</h2>
-        <p>Please select a tour to learn more:</p>
-        <form>
-  <input type="text" id="search-bar" placeholder="Search for tours...">
-</form>
-
-
-        <table>
-          <tr>
-            <th>
-        <div>
-          <div>
-            <strong>Manali</strong>
+  <body class="container">
+    <div id="home" class="container m-5">
+      <header>
+        <div class="" style="background-image:url('images/Granite_mountains.jpg'); background-size:cover;">
+          <nav id="navbar" class="navbar m-5 is-transparent">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://www.bhumikaholidays.com">
+                <figure class="image is-32x32 is-inline-block">
+                  <img class="is-rounded" src="images/logo.jpg">
+                </figure>
+              </a>
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="navbar-menu">
+              <div class="navbar-start">
+                <a href="#home" class="navbar-item">Home</a>
+                <a href="#destination" class="navbar-item">Tours</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link"> More </a>
+                  <div class="navbar-dropdown">
+                    <a href="#aboutUs" class="navbar-item"> About </a>
+                    <a class="navbar-item"> Jobs </a>
+                    <a href="#contactInfo" class="navbar-item"> Contact </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item"> Report an issue </a>
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-end">
+                <span class="navbar-item">
+                  <strong class="pr-1">
+                    <i class="fa fa-envelope"></i>
+                  </strong> srijan@example.com </span>
+                <span class="navbar-item">
+                  <strong class="pr-1">
+                    <i class="fa fa-phone-square"></i>
+                  </strong> 9805162110 </span>
+              </div>
+            </div>
+          </nav>
+          <div class="is-flex" style="align-items: center; height:500px; background-color: rgba(0, 0, 0, 0.4);">
+            <div class="container has-text-right p-6 font1_3">
+              <span>Travel and relish your bhumi with</span>
+              <h1>-bhumika holidays</h1>
+            </div>
           </div>
-          <a href="#tour1" class="tour-link">
-            <img id="manali-img" src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1"  width="470" height="420" >
-          </a>
         </div>
-        </th>
-        <th> 
-        <div>  
-           <div>
-            <strong>Shimla</strong>
+      </header>
+      <div id="aboutUs" class="mt-6">
+        <div>
+          <h1 class="title">About us</h1>
+        </div>
+        <div class="columns is-mobile">
+          <div class="column has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img class="is-rounded" src="images/logo.jpg">
+            </figure>
           </div>
-          <a href="#tour2" class="tour-link">
-            <img id="shimla-img" src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2"  width="470" height="420" >
-          </a>
-        </div></th>
-
-     </tr>
-        <tr>
-      <th>
-        <div>  
-           <div>
-            <strong>Spiti</strong>
+          <div class="column is-three-quarters">
+            <p class="pr-5"> Welcome to our tour and travel website based in Himachal Pradesh, Sanjauli Shimla (Dev bhavan Near tara mata mander). We are here to provide you the best travel experience and that in your budget, our belief is that customer satisfaction is as important as product or service, because we believe in your satisfaction and pleasure. </p>
+            <div class="columns">
+              <div class="column">
+                <div>
+                  <i class="fa fa-shield"></i> Safety/Trust Travel
+                </div>
+                <div>
+                  <i class="fa fa-heart"></i> Budget-Friendly Tour
+                </div>
+              </div>
+              <div class="column">
+                <div>
+                  <i class="fa fa-suitcase"></i> Expert Trip Planning
+                </div>
+                <div>
+                  <i class="fa fa-flash"></i> Fast Communication
+                </div>
+              </div>
+              <div class="column">
+                <div>
+                  <i class="fa fa-headphones"></i> 24/7 Customer Support
+                </div>
+              </div>
+            </div>
           </div>
-          <a href="#tour3" class="tour-link">
-            <img  id="spiti-img "src="https://vargiskhan.com/log/wp-content/uploads/2022/03/spiti-valley-6.jpg" alt="Tour 3"  width="470" height="420" >
-          </a>
-        </div></th>
-        
-        <th>
-
-        <div>  
-           <div>
-            <strong>Leh</strong>
-          </div>
-          <a href="#tour4" class="tour-link">
-            <img  id="leh-img "src="https://vargiskhan.com/log/wp-content/uploads/2022/03/leh-in-winters.jpg" alt="Tour 4"  width="470" height="420" >
-          </a>
-        </div> </tr></table>
-
-<!-- -->
+        </div>
       </div>
-      <div id="tour1" class="tab-content">
-        <h2>Manali</h2>
-        <p>
-Manali is a popular tourist destination located in the northern Indian state of Himachal Pradesh. Here is a sample itinerary for a 3 night 4 day trip to Manali:
-</p>
-<h3>
-Day 1:
-</h3>
-Arrive in Manali and check into your hotel or resort.
-Visit the Hadimba Temple, a popular Hindu temple dedicated to Goddess Hadimba.
-Explore the Manali Mall Road, a popular shopping street with a variety of stores and restaurants.
-
-<h3>
-Day 2:
-</h3>
-Visit the Solang Valley, which is known for its adventure activities such as paragliding, zorbing, and skiing.
-Enjoy the picturesque views of snow-capped mountains and lush greenery.
-Return to Manali in the evening.
-<h3>Day 3:
-</h3>
-Take a day trip to Rohtang Pass, a high mountain pass located at an altitude of 3,978 meters.
-Enjoy the scenic views of the surrounding…
-
+      <div id="planTrip" class="mt-6">
+        <div>
+          <h1 class="title is-4 pt-5 pb-1">Plan your trip</h1>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Name">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-user"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="Contact #">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-phone"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Destination">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="# of tripmates">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-users"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Departure Date">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-calendar"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button is-success" onclick="sendEmail()"> Request a callback </button>
+          </p>
+        </div>
       </div>
-      <div id="tour2" class="tab-content">
-        <h2>Shimla</h2>
-        <p>
-Shimla and Manali are two popular hill stations located in the northern part of India. Here is a suggested itinerary for a trip to Shimla and Manali:
-</p>
-<h3>
-Day 1: Arrive in Shimla
-</h3> 
-Check into your hotel and rest for a while.
-In the evening, take a walk along the Mall Road and explore the local markets.
-<h3>
-Day 2: Shimla Sightseeing
-</h3>
-Visit the Jakhu Temple, situated on a hilltop, offering panoramic views of Shimla.
-Next, visit the Vice Regal Lodge, a colonial-era building with beautiful architecture and gardens.
-Take a stroll at the Glen Forests and soak in the natural beauty of the place.
-In the evening, you can watch a movie at the Gaiety Theatre or attend a cultural event at the Ridge.
-<h3>
-Day 3: Shimla to Manali
-    </h3>  </div>
+	  <!-- TODO content should load dynamically at runtime-->
+	  <div id="destination" class="mt-6">
+        <div>
+          <h1 class="title is-4 pt-5 pb-1">Destinations</h1>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title"> Manali </p>
+                <button class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <div>
+                    <img id="manali-img" src="https://vargiskhan.com/log/wp-content/uploads/2020/08/manali-2.jpg" alt="Tour 1" width="470" height="420">
+                    <div>5 night 6 days</div>
+                    <div>
+                      <i class="fa fa-inr"></i> 12999
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a class="card-footer-item js-modal-trigger" data-target="modal-js-manali">View Details</a>
+                <a href="#planTrip" class="card-footer-item">Get Quote</a>
+              </footer>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title"> Shimla </p>
+                <button class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <div>
+                    <img id="shimla-img" src="https://vargiskhan.com/log/wp-content/uploads/2020/08/shimla-2.jpg" alt="Tour 2" width="470" height="420">
+                    <div>5 night 6 days</div>
+                    <div>
+                      <i class="fa fa-inr"></i> 12999
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a class="card-footer-item js-modal-trigger" data-target="modal-js-shimla">View Details</a>
+                <a href="#planTrip" class="card-footer-item">Get Quote</a>
+              </footer>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title"> Spiti </p>
+                <button class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <div>
+                    <img id="spiti-img " src="https://vargiskhan.com/log/wp-content/uploads/2022/03/spiti-valley-6.jpg" alt="Tour 3" width="470" height="420">
+                    <div>5 night 6 days</div>
+                    <div>
+                      <i class="fa fa-inr"></i> 12999
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a class="card-footer-item js-modal-trigger" data-target="modal-js-spiti">View Details</a>
+                <a href="#planTrip" class="card-footer-item">Get Quote</a>
+              </footer>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title"> Leh </p>
+                <button class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <div>
+                    <img id="leh-img " src="https://vargiskhan.com/log/wp-content/uploads/2022/03/leh-in-winters.jpg" alt="Tour 4" width="470" height="420">
+                    <div>5 night 6 days</div>
+                    <div>
+                      <i class="fa fa-inr"></i> 12999
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a class="card-footer-item js-modal-trigger" data-target="modal-js-leh">View Details</a>
+                <a href="#planTrip" class="card-footer-item">Get Quote</a>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="reviews" class="mt-6">
+        <div>
+          <h1 class="title is-4 pt-5 pb-1">Reviews</h1>
+        </div>
+        <section>
+          <div id="slider">
+            <div class="columns is-mobile">
+              <div class="column has-text-centered">
+                <i class="fa fa-user-circle fa-5x" aria-hidden="true"></i>
+              </div>
+              <div class="column is-three-quarters">
+                <h1>Somesh Rathi</h1>
+                <p class="pr-6"> 
+					It was my first trip with Bhumika Holidays and it was such a good experience. 
+					All the arrangements were so good. Our captain made sure everything was perfect the hotel, rooms, camps, travel everything. 
+					I met a lot of new people, it was such a diverse group. Everyone was so friendly, 
+					I went with 4 friends and ended up having 18 more. Loved the experience. 
+					I would really recommend their service for a hassle free trip. 
+				</p>
+              </div>
+            </div>
+            <div class="columns is-mobile">
+              <div class="column has-text-centered">
+                <i class="fa fa-user-circle fa-5x" aria-hidden="true"></i>
+              </div>
+              <div class="column is-three-quarters">
+                <h1>Milind Talwar</h1>
+                <p class="pr-6"> 
+					The package provided by Srijan was good, we all enjoyed alot. thanks Srijan for arranging such wonderful trip package . 
+				</p>
+              </div>
+            </div>
+            <div class="columns is-mobile">
+              <div class="column has-text-centered">
+                <i class="fa fa-user-circle fa-5x" aria-hidden="true"></i>
+              </div>
+              <div class="column is-three-quarters">
+                <h1>Amit joshi</h1>
+                <p class="pr-6"> 
+					Huge thanks to Srijan ji and the team for arranging everything so very perfectly right from day 1. 
+					Be it the guide, the hotels, the rides, or the hospitality - everything was point. 
+					The highlight was the hospitality of the people around - you would always feel welcomed. 
+					Thanks Srijan Bhai who guided us from day one and made our tour very special </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       
-      <div id="tour3" class="tab-content">
-        <h2>Spiti</h2>
-        <p>Spiti Valley is a high altitude cold desert mountain valley located in the northern part of India, in the state of Himachal Pradesh. Here is a suggested itinerary for a Spiti tour:
-<h3>
-Day 1: Arrival in Shimla
-</h3>
-Arrive in Shimla and check into your hotel.
-Explore the local markets and the Mall Road.
-<h3>
-Day 2: Shimla to Sarahan
-</h3>
-Check out of your hotel in Shimla and travel to Sarahan by road (around 5 hours).
-Visit the Bhimakali Temple, a famous temple dedicated to Goddess Bhimakali.
-Check into your hotel and rest for the day.
-<h3>
-Day 3: Sarahan to Sangla
-</h3>
-Check out of your hotel in Sarahan and travel to Sangla by road (around 4 hours).
-Visit the Kamru Fort and the Sangla Valley.
-Check into your hotel and rest for the day.
-<h3>
-Day 4: Sangla to Nako
- </h3>
+      <div id="tour1" class="tab-content">
+        <p class="pr-5"> Welcome to our tour and travel website based in Himachal Pradesh, India! We are a team of passionate travel enthusiasts who aim to provide you with the best travel experiences in this beautiful state of India. Our website offers a wide range of tour packages and travel services that cater to all kinds of travelers, whether you're a solo traveler, a family, or a group of friends. At our website, we believe that travel is not just about visiting a destination but also about experiencing its culture, people, and food. We aim to provide you with a holistic travel experience that goes beyond just sightseeing. Our itineraries are designed to give you a taste of the local way of life, including local food, customs, and festivals. Our team of experts has extensive knowledge and experience in the travel industry and is committed to providing you with the best services. We ensure that all our tours and activities are safe, comfortable, and enjoyable. We also offer customized tour packages that can be tailored to your specific needs and preferences. We specialize in providing tours and travel services in Himachal Pradesh, which is known for its scenic beauty, adventure activities, and cultural heritage. From the lush green valleys of Shimla and Manali to the snow-capped peaks of Kinnaur and Spiti, we offer a wide range of destinations and activities to suit every taste and budget. So, if you're looking to explore the natural beauty and cultural heritage of Himachal Pradesh, look no further! We invite you to browse through our website and choose from our range of tour packages and travel services. We assure you of a memorable and unforgettable travel experience with us. </p>
       </div>
+    </div>
+    <footer class="footer">
+	  <div id="contactInfo" class="columns is-mobile mt-6">
+        <div class="column has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
+            <img class="is-rounded" src="images/logo.jpg">
+          </figure>
+        </div>
+        <div class="column">
+          <h5>Contact Info </h5>
+          <div>
+            <p>
+              <strong>
+                <i class="fa fa-envelope"></i>
+              </strong> srijan@example.com
+            </p>
+            <p>
+              <strong>
+                <i class="fa fa-phone-square"></i>
+              </strong> 9805162110
+            </p>
+            <p>
+              <strong>
+                <i class="fa fa-address-card"></i>
+              </strong> #1 Sanjauli, Shimla, IND
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="pr-5">Follow us on </h5>
+          <div class="list-group">
+            <a class="list-group-item" href="https://www.facebook.com/profile.php?id=100091058612931&mibextid=ZbWKwL" target="_blank">
+              <i class="fa fa-facebook fa-3x has-text-link" aria-hidden="true"></i>
+            </a>
+            <a class="list-group-item pl-3" href="https://instagram.com/bhumika_holidays?igshid=ZDdkNTZiNTM=" target="_blank">
+              <i class="fa fa-instagram fa-3x has-text-danger" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
       </div>
-      <div id="tour4" class="tab-content">
-        <h2>Leh</h2>
-        <h3>Day 1: Arrival in Leh
-</h3>
-Arrive in Leh and check into your hotel.
-Take it easy to acclimatize to the high altitude.
-<h3>
-Day 2: Sightseeing in Leh
-</h3> 
-Visit the Shanti Stupa, a Buddhist white-domed stupa located on a hilltop with panoramic views of Leh.
-Next, visit the Leh Palace, a former royal palace overlooking the town.
-In the evening, explore the local markets and try some traditional Ladakhi cuisine.
-<h3>Day 3: Leh to Nubra Valley
-</h3>
-Check out of your hotel in Leh and travel to Nubra Valley by road (around 4 hours).
-Visit the Diskit Monastery, a 14th century monastery known for its statue of Maitreya Buddha.
-Take a camel ride in the sand dunes of Hunder.
-Check into your hotel or campsite in Nubra Valley and rest for the day.
-<h3>
-Day 4: Nubra Valley to Pangong Lake
-</h3>
+      <div class="content has-text-centered">
+        <p>Copyright &copy; 2023 <strong>Bhumika Holidays</strong> . All rights reserved. </p>
       </div>
-
-
-
-      </div>
-      <div id="tours" class="tab-content">
-        <p>Tours content goes here: Tours</p>
-      </div>
-      <div id="about" class="tab-content">
-        <p>About content goes here: About</p>
-      </div>
-      <div id="contact" class="tab-content">
-
-	<form action="#" method="post">
-	  <div>
-	    <label for="name">Name:</label>
-	    <input type="text" id="name" name="name" required>
-	  </div>
-	  <div>
-	    <label for="email">Email:</label>
-	    <input type="email" id="email" name="email" required>
-	  </div>
-	  <div>
-	    <label for="message">Message:</label>
-	    <textarea id="message" name="message" required></textarea>
-	  </div>
-	  <div>
-	    <button type="submit">Submit</button>
-	  </div>
-	</form>
-
-      </div>
-    </main>
-
-    <footer>
-      <p>&copy; 2023 Tour and Travel Company. All rights reserved.</p>
     </footer>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+      bulmaCarousel.attach('#slider', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: true,
+        autoplay: true,
+      });
+    </script>
+    <div id="modal-js-manali" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <div id="tour1">
+            <h2>Manali</h2>
+            <p> Manali is a popular tourist destination located in the northern Indian state of Himachal Pradesh. Here is a sample itinerary for a 3 night 4 day trip to Manali: </p>
+            <h3> Day 1: </h3>
+            <p> Arrive in Manali and check into your hotel or resort. Visit the Hadimba Temple, a popular Hindu temple dedicated to Goddess Hadimba. Explore the Manali Mall Road, a popular shopping street with a variety of stores and restaurants. </p>
+            <h3> Day 2: </h3>
+            <p> Visit the Solang Valley, which is known for its adventure activities such as paragliding, zorbing, and skiing. Enjoy the picturesque views of snow-capped mountains and lush greenery. Return to Manali in the evening. </p>
+            <h3>Day 3: </h3>
+            <p> Take a day trip to Rohtang Pass, a high mountain pass located at an altitude of 3,978 meters. Enjoy the scenic views of the surrounding snow-capped mountains and glaciers. Return to Manali in the evening. </p>
+            <h3>Day 4: </h3>
+            <p> Visit the Naggar Castle, a historic castle built in the 15th century. Explore the Naggar Art Gallery, which houses a collection of traditional and contemporary art. Depart from Manali for your next destination. Note: This itinerary is just a sample and can be customized based on your interests and preferences. Also, please check the latest travel restrictions and guidelines before planning your trip to Manali. </p>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-js-shimla" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <div id="tour2">
+            <h2>Shimla</h2>
+            <p> Shimla and Manali are two popular hill stations located in the northern part of India. Here is a suggested itinerary for a trip to Shimla and Manali: </p>
+            <h3> Day 1: Arrive in Shimla </h3>
+            <p> Check into your hotel and rest for a while. In the evening, take a walk along the Mall Road and explore the local markets. </p>
+            <h3> Day 2: Shimla Sightseeing </h3>
+            <p> Visit the Jakhu Temple, situated on a hilltop, offering panoramic views of Shimla. Next, visit the Vice Regal Lodge, a colonial-era building with beautiful architecture and gardens. Take a stroll at the Glen Forests and soak in the natural beauty of the place. In the evening, you can watch a movie at the Gaiety Theatre or attend a cultural event at the Ridge. </p>
+            <h3> Day 3: Shimla to Manali </h3>
+            <p> Check out of your hotel in Shimla and travel to Manali by road (around 7 hours). On the way, stop at the scenic Kullu Valley and visit the famous Kullu Shawl factories. Arrive in Manali and check into your hotel. </p>
+            <h3> Day 4: Manali Sightseeing </h3>
+            <p> Visit the Hadimba Temple, a unique temple dedicated to Hidimba Devi, located amidst dense deodar forests. Explore the Tibetan Monastery and the Van Vihar National Park. Take a dip in the hot water springs of Vashisht or indulge in adventure sports like paragliding or river rafting. </p>
+            <h3> Day 5: Manali Adventure </h3>
+            <p> Take an early morning drive to Solang Valley, where you can enjoy adventure sports like skiing, snowboarding, and zorbing. In the evening, you can take a stroll along the Mall Road and explore the local markets. </p>
+            <h3> Day 6: Manali to Chandigarh </h3>
+            <p> Check out of your hotel in Manali and travel to Chandigarh by road (around 8 hours). Check into your hotel in Chandigarh and rest for the day. </p>
+            <h3> Day 7: Departure </h3>
+            <p> On the last day of your trip, visit the Rock Garden, a beautiful garden made entirely of recycled materials. Afterward, visit the famous Sukhna Lake and take a boat ride. In the evening, depart for your next destination. Note: This itinerary is just a suggestion, and you can modify it based on your interests and preferences. </p>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-js-spiti" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <div id="tour3">
+            <h2>Spiti</h2>
+            <p>Spiti Valley is a high altitude cold desert mountain valley located in the northern part of India, in the state of Himachal Pradesh. Here is a suggested itinerary for a Spiti tour:</p>
+            <h3> Day 1: Arrival in Shimla </h3>
+            <p> Arrive in Shimla and check into your hotel. Explore the local markets and the Mall Road. </p>
+            <h3> Day 2: Shimla to Sarahan </h3>
+            <p> Check out of your hotel in Shimla and travel to Sarahan by road (around 5 hours). Visit the Bhimakali Temple, a famous temple dedicated to Goddess Bhimakali. Check into your hotel and rest for the day. </p>
+            <h3> Day 3: Sarahan to Sangla </h3>
+            <p> Check out of your hotel in Sarahan and travel to Sangla by road (around 4 hours). Visit the Kamru Fort and the Sangla Valley. Check into your hotel and rest for the day.</p>
+            <h3> Day 4: Sangla to Nako </h3>
+            <p> Check out of your hotel in Sangla and travel to Nako by road (around 7 hours). Visit the Nako Lake, a beautiful lake surrounded by snow-capped mountains. Check into your hotel and rest for the day. </p>
+            <h3> Day 5: Nako to Tabo </h3>
+            <p> Check out of your hotel in Nako and travel to Tabo by road (around 3 hours). Visit the Tabo Monastery, a famous monastery known for its ancient murals and sculptures. Check into your hotel and rest for the day. </p>
+            <h3> Day 6: Tabo to Kaza </h3>
+            <p> Check out of your hotel in Tabo and travel to Kaza by road (around 3 hours). Visit the Key Monastery, a famous monastery located on a hilltop offering panoramic views of the surrounding mountains. Check into your hotel and rest for the day.
+            <p>
+            <h3> Day 7: Kaza Sightseeing </h3>
+            <p> Visit the Kibber Village, one of the highest inhabited villages in the world. Next, visit the Langza Village and the Hikkim Village, known for their beautiful landscapes and ancient monasteries. In the evening, you can take a stroll along the Kaza Market and explore the local markets. </p>
+            <h3> Day 8: Kaza to Chandratal Lake </h3>
+            <p> Check out of your hotel in Kaza and travel to Chandratal Lake by road (around 6 hours). Enjoy the scenic beauty of the place and spend some time by the lake. Check into your campsite and rest for the day. </p>
+            <h3> Day 9: Chandratal Lake to Manali </h3>
+            <p> Check out of your campsite in Chandratal Lake and travel to Manali by road (around 7 hours). Check into your hotel in Manali and rest for the day. </p>
+            <h3> Day 10: Departure </h3>
+            <p> On the last day of your trip, check out of your hotel and depart for your next destination. Note: This itinerary is just a suggestion, and you can modify it based on your interests and preferences. Also, please note that due to the high altitude of the Spiti Valley, it is important to acclimatize yourself properly and take necessary precautions to avoid altitude sickness. </p>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-js-leh" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <div id="tour4">
+            <h2>Leh</h2>
+            <h3>Day 1: Arrival in Leh </h3>
+            <p> Arrive in Leh and check into your hotel. Take it easy to acclimatize to the high altitude. </p>
+            <h3> Day 2: Sightseeing in Leh </h3>
+            <p> Visit the Shanti Stupa, a Buddhist white-domed stupa located on a hilltop with panoramic views of Leh. Next, visit the Leh Palace, a former royal palace overlooking the town. In the evening, explore the local markets and try some traditional Ladakhi cuisine.</p>
+            <h3>Day 3: Leh to Nubra Valley </h3>
+            <p> Check out of your hotel in Leh and travel to Nubra Valley by road (around 4 hours). Visit the Diskit Monastery, a 14th century monastery known for its statue of Maitreya Buddha. Take a camel ride in the sand dunes of Hunder. Check into your hotel or campsite in Nubra Valley and rest for the day.</p>
+            <h3> Day 4: Nubra Valley to Pangong Lake </h3>
+            <p> Check out of your hotel or campsite in Nubra Valley and travel to Pangong Lake by road (around 6 hours). Enjoy the scenic beauty of the place and spend some time by the lake. Check into your campsite and rest for the day. </p>
+            <h3> Day 5: Pangong Lake to Leh </h3>
+            <p> Check out of your campsite in Pangong Lake and travel back to Leh by road (around 6 hours). Visit the Hemis Monastery, a famous monastery known for its rich collection of ancient relics and manuscripts. Check into your hotel and rest for the day. </p>
+            <h3> Day 6: Leh to Tso Moriri Lake </h3>
+            <p> Check out of your hotel in Leh and travel to Tso Moriri Lake by road (around 7 hours). Enjoy the scenic beauty of the place and spend some time by the lake. Check into your campsite and rest for the day. </p>
+            <h3> Day 7: Tso Moriri Lake to Leh </h3>
+            <p> Check out of your campsite in Tso Moriri Lake and travel back to Leh by road (around 7 hours). Visit the Thiksey Monastery, a beautiful monastery known for its stunning architecture and scenic location. In the evening, you can take a stroll along the Leh Market and explore the local markets. </p>
+            <h3> Day 8: Departure </h3>
+            <p> On the last day of your trip, check out of your hotel and depart for your next destination. Note: This itinerary is just a suggestion, and you can modify it based on your interests and preferences. Also, please note that due to the high altitude of Ladakh, it is important to acclimatize yourself properly and take necessary precautions to avoid altitude sickness. </p>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
   </body>
 </html>
-
-
-
-
